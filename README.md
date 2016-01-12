@@ -27,9 +27,9 @@ Then run `rails s` again.
 
 Create a `SessionsController`. This will be simpler than ones we've made in the past. This time, we won't log you in at all, we'll just print all the information in the `request.env['omniauth.auth']` hash. The tests verify that the controller sets the appropriate variable for the views; ensure they pass.
 
-There is already a view that outputs all the authenticaton data, as well as showing you the user's photo if one is provided.
+There is already a view that outputs all the authentication data, as well as showing you the user's photo if one is provided.
 
-We're not logging anyone in now. But if we were, it wouldn't be hard. You can trust the data coming in from `request.env['omniauth.auth']`, at least as far as you can trust the authentiation provider.
+We're not logging anyone in now. But if we were, it wouldn't be hard. You can trust the data coming in from `request.env['omniauth.auth']`, at least as far as you can trust the authentication provider.
 
 For extra fun, try editing your initializer to look like this:
 
