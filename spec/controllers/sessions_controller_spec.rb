@@ -1,17 +1,27 @@
 require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
+
+  # before(:each) do
+
+  # end
+
+  let(:user) {User.create(:name => "Blake", :uid => 1234567
+    )}
+
   describe 'get create' do
-    it 'assigns omniauth data to @auth' do
-      auth = {      
-        here: 'is',
-        some: 'auth',
-        data: '.',
-        provider: 'facebook',
+    it 'creates user if it doesnt exist in the db' do
+      auth = {
+        :provider => 'facebook',
+        :uid => '1234567',
+        :info => {
+          :email => 'joe@bloggs.com',
+          :name => 'Joe Bloggs'
+        }
       }
       @request.env['omniauth.auth'] = auth
       get :create
-      assert assigns(:auth) == auth
+      expect(@request.session[:user_id]).to eq(user.id)
     end
   end
 end
