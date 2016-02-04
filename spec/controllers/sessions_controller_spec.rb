@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
 
-  # before(:each) do
-
-  # end
+  before(:each) do
+    User.destroy_all
+  end
 
   let(:user) {User.create(:name => "Blake", :uid => 1234567
     )}
@@ -19,6 +19,8 @@ RSpec.describe SessionsController, type: :controller do
           :name => 'Joe Bloggs'
         }
       }
+      auth = ActiveSupport::HashWithIndifferentAccess.new(auth)
+      user
       @request.env['omniauth.auth'] = auth
       get :create
       expect(@request.session[:user_id]).to eq(user.id)
