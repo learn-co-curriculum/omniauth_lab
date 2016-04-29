@@ -10,7 +10,7 @@ Let's implement all the knowledge we've just gained about oauth and omniauth.  I
 
 ## Instructions
 
-Our app will have one page, with a "Login with Facebook" link on it. When the user clicks the link, they'll be asked to authorize our app on Facebook. When they do, they'll be logged in by our app our created in our database if they've never logged in before.
+Our app will have one page, with a "Login with Facebook" link on it. When the user clicks the link, they'll be asked to authorize our app on Facebook. When they do, they'll be logged in by our app or created in our database if they've never logged in before.
 
 There is already a view that outputs all the authenticaton data, as well as showing you the user's photo if one is provided.
 
@@ -20,3 +20,4 @@ There is already a view that outputs all the authenticaton data, as well as show
 [Omniauth]: https://github.com/intridea/omniauth
 [facebook_dev]: https://developers.facebook.com
 [facebook_info_fields]: https://developers.facebook.com/docs/graph-api/reference/user/
+<p class='util--hide'>View <a href='https://learn.co/lessons/omniauth_lab'>Omniauth Lab</a> on Learn.co and start learning to code for free.</p>
