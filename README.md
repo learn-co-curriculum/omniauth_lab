@@ -12,7 +12,7 @@ Let's implement all the knowledge we've just gained about OAuth and Omniauth. In
 
 Our app will have one page with a "Login with Facebook" link on it. When the user clicks the link, they'll be asked to authorize our app's access to certain details from their Facebook account. Upon acceptance, our app will use the retrieved data to either locate an existing user account or create a new one, and the user will then be logged in to our app.
 
-There is already a view that outputs all the authenticaton data and displays the user's photo if one is provided.
+There is already a view that outputs all the authentication data and displays the user's photo if one is provided.
 
 ## Resources
   * [Omniauth](https://github.com/intridea/omniauth)
