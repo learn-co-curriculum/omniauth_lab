@@ -14,7 +14,7 @@ Our app will have one page with a "Login with Facebook" link on it. When the use
 
 There is already a view that outputs all the authentication data and displays the user's photo if one is provided.
 
-As of March 2018, Facebook now requires secure (https) app urls. If you would like to test your App's functionality in the browser, you will need to do so running 'thin'. Use: `thin start --ssl` instead of `rails s` when testing in the browser. Note: your browser, (Chrome, for instance), may display a security warning that you are not accessing a secure sight (in the end we are just faking an https url to satisfy Facebook). Feel free to bypass that warning and continue on to your site. 
+As of March 2018, Facebook now requires secure (https) app urls. If you would like to test your App's functionality in the browser, you will need to do so running 'thin'. Use: `thin start --ssl` instead of `rails s` when testing in the browser. Note: your browser, (Chrome, for instance), may display a security warning that you are not accessing a secure site (in the end we are just faking an https url to satisfy Facebook). Feel free to bypass that warning and continue on to your site. 
 
 ## Resources
   * [Omniauth](https://github.com/intridea/omniauth)
