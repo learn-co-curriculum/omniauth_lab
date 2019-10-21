@@ -10,6 +10,13 @@ Let's implement all the knowledge we've just gained about OAuth and Omniauth. In
 
 ## Instructions
 
+**Note**: You don't have to create a Facebook account to complete this lab. You can set these credentials in `.env` file from the OmniAuth lesson:
+
+```
+FACEBOOK_KEY=247632982388118
+FACEBOOK_SECRET=01ab234567890c123d456ef78babc901
+```
+
 Our app will have one page with a "Login with Facebook" link on it. When the user clicks the link, they'll be asked to authorize our app's access to certain details from their Facebook account. Upon acceptance, our app will use the retrieved data to either locate an existing user account or create a new one, and the user will then be logged in to our app.
 
 There is already a view that outputs all the authentication data and displays the user's photo if one is provided.
