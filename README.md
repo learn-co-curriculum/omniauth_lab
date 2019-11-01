@@ -116,7 +116,18 @@ method to `create` and try again.
 You should be redirected back to your `Welcome#home` route and you will see
 some diagnostic information on the screen.
 
-Make sure you can step through the logic that you just worked through:
+```text
+We will put omniauth authentication data here (if present)
+
+Welcome sgharms! We know who you are thanks to Omniauth!
+
+You were authenticated by developer
+
+The raw data returned from Omniauth were:
+    {"provider"=>"developer", "uid"=>"test", "info"=>{"name"=>"Test User", "email"=>"test"}, "credentials"=>{}, "extra"=>{}}
+```
+
+Make sure you can step through the logic that Rails just performed:
 
 1. From the root route
 2. To the _developer_ strategy's form which used the `/auth/:provider/callback`
@@ -221,6 +232,11 @@ Using third-party authentication is commonly used to help users create new
 accounts in applications. For examples of how this can work visit the [Omniauth
 "Integration" document][integration] or consult their [wiki][].
 
+## Lab
+
+If you follow along with this document, the lab should be passing at this
+point!  Submit it and move on! If you'd like to create a new branch off of this
+repo (for further experimentation) feel free to do so!
 
 * [Omniauth][]
 * [List of Omniauth Authentication Strategies][full-list]
