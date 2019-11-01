@@ -32,7 +32,7 @@ something that you might actually see in the wild.
 
 [Omniauth] is a flexible framework for third-party authentication. [Omniauth]
 supports a **ton** of authentication providers ([full-list][]). Each of these
-pluggable providers are said to have a "strategy" that [Omniauth] can use. The
+pluggable providers is said to have a "strategy" that [Omniauth] can use. The
 word strategy here might seem strange, but it means something like "plug-in."
 It comes from the programming design pattern called "Strategy." As you grow in
 object-oriented skill, you might find yourself learning and even using the
@@ -93,7 +93,7 @@ Make this route accessible by editing `config/routes.rb` and also make
 > _WOW!_ That last paragraph integrated a lot of Rails knowledge. This is the
 > level at which professional Rails developers communicate with each other!
 
-Start up your web server and visit the root route. Select `Signing in with the
+Start your web server and visit the root route. Select `Signing in with the
 developer strategy`.
 
 You'll be redirected to the "dummy" or "temporary" signup form for the
@@ -101,7 +101,7 @@ You'll be redirected to the "dummy" or "temporary" signup form for the
 
 ![Developer strategy form](https://curriculum-content.s3.amazonaws.com/omniauth-lab/developer_strategy_login.png)
 
-Fill in the name and the email address and submit the form....
+Fill in the name and the email address and submit the form...
 
 ![Developer strategy form completed](https://curriculum-content.s3.amazonaws.com/omniauth-lab/developer_strategy_login_filled_in.png)
 
@@ -162,17 +162,17 @@ Rails application.
 Here, because we defined `GITHUB_KEY` in `.env`, we'll have its value available
 through `ENV['GITHUB_KEY']`
 
-Because the `.env` file is full of secure keys, which are like passwords, we
+Since the `.env` file is full of secure keys, which are like passwords, we
 should ***NEVER EVER EVER ADD OR COMMIT TO OUR GIT REPOSITORY***. In this
-repository we've added `.env` go the `.gitignore` file so that `git` never sees
+repository, we've added `.env` go the `.gitignore` file so that `git` never sees
 the `.env` file.
 
 If we ever commit and push these keys to GitHub or anywhere on the internet,
-***WE MUST REVOKE THEM IMMEDIATELY***. Because of the way Git is build,
+***WE MUST REVOKE THEM IMMEDIATELY***. Because of the way Git is built,
 enterprising bad people can find commits with passwords _easily_.
 
 So, we know we need to guard our keys and store them in `.env`...but how do we
-get them? For this we need to work with GitHub bureaucracy.
+get them? For this, we need to work with GitHub bureaucracy.
 
 ### Getting our Keys
 
@@ -217,7 +217,7 @@ something like:
 
 ![GitHub Authenticate Form](https://curriculum-content.s3.amazonaws.com/omniauth-lab/authenticate_via_github.png)
 
-If you provide your GitHub credentials (including two-factor, if it's
+If you provide your GitHub credentials (including two-factor if it's
 enabled!), you'll be redirected back to our `Session#create` and then
 redirected, from there, back to the root route with GitHub information in the
 `session`.
