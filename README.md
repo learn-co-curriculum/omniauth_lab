@@ -99,15 +99,15 @@ developer strategy`.
 You'll be redirected to the "dummy" or "temporary" signup form for the
 `developer` strategy:
 
-(image)
+![Developer strategy form](https://curriculum-content.s3.amazonaws.com/omniauth-lab/developer_strategy_login.png)
 
 Fill in the name and the email address and submit the form....
 
-(image)
+![Developer strategy form completed](https://curriculum-content.s3.amazonaws.com/omniauth-lab/developer_strategy_login_filled_in.png)
 
-Whoops
+Whoops!
 
-(image)
+![Incomplete routing error](https://curriculum-content.s3.amazonaws.com/omniauth-lab/create_action_undefined.png)
 
 Looks like we need to finish implementing our `SessionController`. We've
 provided the logic for you inside of a method called `xcreate`. Rename this
@@ -146,7 +146,7 @@ with code. We'll be following the documentation in [omniauth-github][oagh]
 The contents of this file are available as a `Hash` called `ENV` inside of our
 Rails application.
 
-(image)
+![.env file snippet](https://curriculum-content.s3.amazonaws.com/omniauth-lab/dotenv-snippet.png)
 
 Here, because we defined `GITHUB_KEY` in `.env`, we'll have its value available
 through `ENV['GITHUB_KEY']`
@@ -168,11 +168,11 @@ get them? For this we need to work with GitHub bureaucracy.
 First, visit GitHub: https://github.com/settings/developers. When you're logged
 in, this site will let you click a button to create a "New OAuth App."
 
-(image)
+![New OAuth App button](https://curriculum-content.s3.amazonaws.com/omniauth-lab/new_oauth_app_button.png)
 
 When we click it we'll be asked to fill in a form:
 
-(image)
+![New OAuth Registry Form](https://curriculum-content.s3.amazonaws.com/omniauth-lab/register_new_oauth_app_blank.png)
 
 The important part is to provide the callback path that you defined at the very
 beginning. Your app will hand off to GitHub, GitHub needs to know how to hand
@@ -180,9 +180,13 @@ off _back_ to your application (to, as it were, "call it back").
 
 The form looks like this when filled in:
 
-(image)
+![New OAuth Registry Form - Completed](https://curriculum-content.s3.amazonaws.com/omniauth-lab/register_new_oauth_app_blank.png)
 
-Super! Let's update our initializer (`config/initializers/omniauth.rb`) to look
+Super! GitHub will then share our keys with us:
+
+![GitHub Credentials Display](https://curriculum-content.s3.amazonaws.com/omniauth-lab/credentials-blankified.png)
+
+Let's update our initializer (`config/initializers/omniauth.rb`) to look
 like:
 
 ```ruby
@@ -200,14 +204,14 @@ With this in place, visit the root route and click the link that uses GitHub
 for authentication. You'll know you're on the right track when you see
 something like:
 
-(image)
+![GitHub Authenticate Form](https://curriculum-content.s3.amazonaws.com/omniauth-lab/authenticate_via_github.png)
 
 If you provide your GitHub credentials (including two-factor, if it's
 enabled!), you'll be redirected back to our `Session#create` and then
 redirected, from there, back to the root route with GitHub information in the
 `session`.
 
-(image)
+![Post GitHub Authentication](https://curriculum-content.s3.amazonaws.com/omniauth-lab/omniauth_postload.png)
 
 Congratulations! You just had GitHub handle user authentication for you!
 
