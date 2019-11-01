@@ -46,8 +46,8 @@ provided them in the `Gemfile`.
 We'll start by following along with the instructions provided by [Omniauth][].
 Take a look at their ["Getting Started"][started] section and then come back.
 
-These directions provide a file and a formula. In
-`config/initializers/omniauth.rb`, we'll put these lines:
+These directions provide a file and a formula. In `config/initializers`, create
+a file called `omniauth.rb` and put in the following lines:
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
