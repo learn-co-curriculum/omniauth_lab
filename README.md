@@ -6,26 +6,45 @@
 
 ## Introduction
 
-Let's implement all the knowledge we've just gained about OAuth and Omniauth. In this lab we'll be allowing users to log in via Facebook. Because we have no control over Facebook, the tests can't ensure that Facebook responds correctly, so you might have issues on the Facebook side if you haven't set up everything exactly as explained in the README. We'll be testing that everything on our server's side is configured correctly and that, assuming that Facebook gives us the correct response, we can log the user in.
+Let's implement all the knowledge we've just gained about OAuth and Omniauth.
+In this lab we'll be allowing users to log in via Facebook. Because we have no
+control over Facebook, the tests can't ensure that Facebook responds correctly,
+so you might have issues on the Facebook side if you haven't set up everything
+exactly as explained in the README. We'll be testing that everything on our
+server's side is configured correctly and that, assuming that Facebook gives us
+the correct response, we can log the user in.
 
 ## Instructions
 
-**Note**: You don't have to create a Facebook account to complete this lab. You can set these credentials in `.env` file from the OmniAuth lesson:
+**Note**: You don't have to create a Facebook account to complete this lab. You
+can set these credentials in `.env` file from the OmniAuth lesson:
 
 ```
 FACEBOOK_KEY=247632982388118
 FACEBOOK_SECRET=01ab234567890c123d456ef78babc901
 ```
 
-Our app will have one page with a "Login with Facebook" link on it. When the user clicks the link, they'll be asked to authorize our app's access to certain details from their Facebook account. Upon acceptance, our app will use the retrieved data to either locate an existing user account or create a new one, and the user will then be logged in to our app.
+Our app will have one page with a "Login with Facebook" link on it. When the
+user clicks the link, they'll be asked to authorize our app's access to certain
+details from their Facebook account. Upon acceptance, our app will use the
+retrieved data to either locate an existing user account or create a new one,
+and the user will then be logged in to our app.
 
-There is already a view that outputs all the authentication data and displays the user's photo if one is provided.
+There is already a view that outputs all the authentication data and displays
+the user's photo if one is provided.
 
-As of March 2018, Facebook now requires secure (https) app urls. If you would like to test your App's functionality in the browser, you will need to do so running 'thin'. Use: `thin start --ssl` instead of `rails s` when testing in the browser. Note: your browser, (Chrome, for instance), may display a security warning that you are not accessing a secure site (in the end we are just faking an https url to satisfy Facebook). Feel free to bypass that warning and continue on to your site. 
+As of March 2018, Facebook now requires secure (https) app urls. If you would
+like to test your App's functionality in the browser, you will need to do so
+running 'thin'. Use: `thin start --ssl` instead of `rails s` when testing in
+the browser. Note: your browser, (Chrome, for instance), may display a security
+warning that you are not accessing a secure site (in the end we are just faking
+an https url to satisfy Facebook). Feel free to bypass that warning and
+continue on to your site. 
 
 ## Resources
-  * [Omniauth](https://github.com/intridea/omniauth)
-  * [Facebook Developer Portal](https://developers.facebook.com)
-  * [Facebook API User Info Fields](https://developers.facebook.com/docs/graph-api/reference/user/)
+
+* [Omniauth](https://github.com/intridea/omniauth)
+* [Facebook Developer Portal](https://developers.facebook.com)
+* [Facebook API User Info Fields](https://developers.facebook.com/docs/graph-api/reference/user/)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/omniauth_lab' title='Omniauth Lab'>Omniauth Lab</a> on Learn.co and start learning to code for free.</p>
