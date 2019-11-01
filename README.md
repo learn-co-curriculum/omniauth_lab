@@ -15,7 +15,7 @@ Twitter, Facebook, and Google. We'll be configuring this application to use
 GitHub.
 
 We **won't** be creating a full user sign-up flow. Depending on which
-third-party authenticator you use the data you receive will vary. As such,
+third-party authenticator you use, the data you receive will vary. As such,
 we're going to provide the scaffolding to ensure you're talking to the
 third-party authenticator and will set your expectations about what sort of
 data you might have available. At the end of this lab, you will have the
@@ -26,13 +26,13 @@ To start, we'll implement a simple authentication scheme, provided by Omniauth,
 called "developer." The code in the "developer" authenticator is designed to
 help you make sure you have your application set up. Once "developer" is
 working as expected, we'll swap it for "github" and our app will look like
-something that you might actually see in the wild.
+something that you might see in the wild.
 
 ## Identify "Strategies" in Omniauth
 
 [Omniauth] is a flexible framework for third-party authentication. [Omniauth]
 supports a **ton** of authentication providers ([full-list][]). Each of these
-pluggable providers are said to have a "strategy" that [Omniauth] can use. The
+pluggable providers is said to have a "strategy" that [Omniauth] can use. The
 word strategy here might seem strange, but it means something like "plug-in."
 It comes from the programming design pattern called "Strategy." As you grow in
 object-oriented skill, you might find yourself learning and even using the
@@ -56,7 +56,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-We don't really have to know how Rails initializers work, we can just follow
+We don't have to know how Rails initializers work; we can just follow
 the [Omniauth] instructions. The name "initializer" suggests that they're used
 to set up Rails when we start it. We can learn more about initializers
 [here][init].
@@ -96,12 +96,12 @@ Make this route accessible by editing `config/routes.rb` and also make
 Start up your web server and visit the root route. Select `Signing in with the
 developer strategy`.
 
-You'll be redirected to the "dummy" or "temporary" signup form for the
+You'll be redirected to the "dummy" or "temporary" sign-up form for the
 `developer` strategy:
 
 ![Developer strategy form](https://curriculum-content.s3.amazonaws.com/omniauth-lab/developer_strategy_login.png)
 
-Fill in the name and the email address and submit the form....
+Fill in the name and the email address and submit the form...
 
 ![Developer strategy form completed](https://curriculum-content.s3.amazonaws.com/omniauth-lab/developer_strategy_login_filled_in.png)
 
@@ -144,7 +144,7 @@ can log in using _GitHub's_ authentication.
 ## Log in via GitHub OAuth Authentication
 
 Getting things to work with GitHub, now that we have _developer_ working, is
-much easier. There are a number of steps to undertake that have _nothing_ to do
+much easier. There are many steps to undertake that have _nothing_ to do
 with code. We'll be following the documentation in [omniauth-github][oagh]
 
 1. Update the `OmniAuth::Builder` to use a `:github` provider
@@ -163,12 +163,12 @@ Here, because we defined `GITHUB_KEY` in `.env`, we'll have its value available
 through `ENV['GITHUB_KEY']`
 
 Because the `.env` file is full of secure keys, which are like passwords, we
-should ***NEVER EVER EVER ADD OR COMMIT TO OUR GIT REPOSITORY***. In this
-repository we've added `.env` go the `.gitignore` file so that `git` never sees
+should ***NEVER EVER EVER ADD OR COMMIT TO THEM OUR GIT REPOSITORY***. In this
+repository we've added `.env` to the `.gitignore` file so that `git` never sees
 the `.env` file.
 
 If we ever commit and push these keys to GitHub or anywhere on the internet,
-***WE MUST REVOKE THEM IMMEDIATELY***. Because of the way Git is build,
+***WE MUST REVOKE THEM IMMEDIATELY***. Because of the way Git is built,
 enterprising bad people can find commits with passwords _easily_.
 
 So, we know we need to guard our keys and store them in `.env`...but how do we
@@ -191,7 +191,7 @@ off _back_ to your application (to, as it were, "call it back").
 
 The form looks like this when filled in:
 
-![New OAuth Registry Form - Completed](https://curriculum-content.s3.amazonaws.com/omniauth-lab/register_new_oauth_app_blank.png)
+![New OAuth Registry Form - Completed](https://curriculum-content.s3.amazonaws.com/omniauth-lab/register_new_oauth_app_filld.png)
 
 Super! GitHub will then share our keys with us:
 
@@ -217,7 +217,7 @@ something like:
 
 ![GitHub Authenticate Form](https://curriculum-content.s3.amazonaws.com/omniauth-lab/authenticate_via_github.png)
 
-If you provide your GitHub credentials (including two-factor, if it's
+If you provide your GitHub credentials (including two-factor if it's
 enabled!), you'll be redirected back to our `Session#create` and then
 redirected, from there, back to the root route with GitHub information in the
 `session`.
@@ -229,8 +229,8 @@ Congratulations! You just had GitHub handle user authentication for you!
 ## Next Steps
 
 Using third-party authentication is commonly used to help users create new
-accounts in applications. For examples of how this can work visit the [Omniauth
-"Integration" document][integration] or consult their [wiki][].
+accounts in applications. For examples of how this can work visit the 
+[Omniauth "Integration" document][integration] or consult their [wiki][].
 
 ## Lab
 
