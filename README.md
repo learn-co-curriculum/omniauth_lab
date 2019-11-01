@@ -81,7 +81,7 @@ match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
 Once that's done, create a `WelcomeController` with an action called `home`.
 Make this route accessible by editing `config/routes.rb` and also make
 `welcome#home` be the `root` route for this Rails application. You can verify
-that you've done it right when `rspec spec/views/welcome/` works.
+that you've done it right when `rspec -t developer_strategy` works.
 
 > _WOW!_ That last paragraph integrated a lot of Rails knowledge. This is the
 > level at which professional Rails developers communicate with each other!
