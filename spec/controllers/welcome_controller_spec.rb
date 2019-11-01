@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe WelcomeController, type: :controller, developer_strategy: true do
+RSpec.describe WelcomeController, type: :controller do
 
   describe "GET #home" do
     it "returns http success" do
