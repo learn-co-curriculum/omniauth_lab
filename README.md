@@ -14,7 +14,6 @@ authentication from a third party. Typical third-party authenticators are
 Twitter, Facebook, and Google. We'll be configuring this application to use
 GitHub.
 
-<<<<<<< HEAD
 We **won't** be creating a full user sign-up flow. Depending on which
 third-party authenticator you use the data you receive will vary. As such,
 we're going to provide the scaffolding to ensure you're talking to the
