@@ -14,6 +14,7 @@ authentication from a third party. Typical third-party authenticators are
 Twitter, Facebook, and Google. We'll be configuring this application to use
 GitHub.
 
+<<<<<<< HEAD
 We **won't** be creating a full user sign-up flow. Depending on which
 third-party authenticator you use the data you receive will vary. As such,
 we're going to provide the scaffolding to ensure you're talking to the
@@ -26,7 +27,7 @@ To start, we'll implement a simple authentication scheme, provided by Omniauth,
 called "developer." The code in the "developer" authenticator is designed to
 help you make sure you have your application set up. Once "developer" is
 working as expected, we'll swap it for "github" and our app will look like
-something that you might actually see in the wild.
+something that you might see in the wild.
 
 ## Identify "Strategies" in Omniauth
 
@@ -46,8 +47,8 @@ provided them in the `Gemfile`.
 We'll start by following along with the instructions provided by [Omniauth][].
 Take a look at their ["Getting Started"][started] section and then come back.
 
-These directions provide a file and a formula. In
-`config/initializers/omniauth.rb`, we'll put these lines:
+These directions provide a file and a formula. In `config/initializers`, create
+a file called `omniauth.rb` and put in the following lines:
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
@@ -56,7 +57,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
-We don't really have to know how Rails initializers work, we can just follow
+We don't have to know how Rails initializers work; we can just follow
 the [Omniauth] instructions. The name "initializer" suggests that they're used
 to set up Rails when we start it. We can learn more about initializers
 [here][init].
@@ -96,7 +97,7 @@ Make this route accessible by editing `config/routes.rb` and also make
 Start your web server and visit the root route. Select `Signing in with the
 developer strategy`.
 
-You'll be redirected to the "dummy" or "temporary" signup form for the
+You'll be redirected to the "dummy" or "temporary" sign-up form for the
 `developer` strategy:
 
 ![Developer strategy form](https://curriculum-content.s3.amazonaws.com/omniauth-lab/developer_strategy_login.png)
@@ -144,7 +145,7 @@ can log in using _GitHub's_ authentication.
 ## Log in via GitHub OAuth Authentication
 
 Getting things to work with GitHub, now that we have _developer_ working, is
-much easier. There are a number of steps to undertake that have _nothing_ to do
+much easier. There are many steps to undertake that have _nothing_ to do
 with code. We'll be following the documentation in [omniauth-github][oagh]
 
 1. Update the `OmniAuth::Builder` to use a `:github` provider
@@ -162,9 +163,9 @@ Rails application.
 Here, because we defined `GITHUB_KEY` in `.env`, we'll have its value available
 through `ENV['GITHUB_KEY']`
 
-Since the `.env` file is full of secure keys, which are like passwords, we
-should ***NEVER EVER EVER ADD OR COMMIT TO OUR GIT REPOSITORY***. In this
-repository, we've added `.env` go the `.gitignore` file so that `git` never sees
+Because the `.env` file is full of secure keys, which are like passwords, we
+should ***NEVER EVER EVER ADD OR COMMIT TO THEM OUR GIT REPOSITORY***. In this
+repository we've added `.env` to the `.gitignore` file so that `git` never sees
 the `.env` file.
 
 If we ever commit and push these keys to GitHub or anywhere on the internet,
@@ -172,7 +173,7 @@ If we ever commit and push these keys to GitHub or anywhere on the internet,
 enterprising bad people can find commits with passwords _easily_.
 
 So, we know we need to guard our keys and store them in `.env`...but how do we
-get them? For this, we need to work with GitHub bureaucracy.
+get them? For this we need to work with GitHub bureaucracy.
 
 ### Getting our Keys
 
@@ -191,7 +192,7 @@ off _back_ to your application (to, as it were, "call it back").
 
 The form looks like this when filled in:
 
-![New OAuth Registry Form - Completed](https://curriculum-content.s3.amazonaws.com/omniauth-lab/register_new_oauth_app_blank.png)
+![New OAuth Registry Form - Completed](https://curriculum-content.s3.amazonaws.com/omniauth-lab/register_new_oauth_app_filld.png)
 
 Super! GitHub will then share our keys with us:
 
@@ -229,8 +230,8 @@ Congratulations! You just had GitHub handle user authentication for you!
 ## Next Steps
 
 Using third-party authentication is commonly used to help users create new
-accounts in applications. For examples of how this can work visit the [Omniauth
-"Integration" document][integration] or consult their [wiki][].
+accounts in applications. For examples of how this can work visit the 
+[Omniauth "Integration" document][integration] or consult their [wiki][].
 
 ## Lab
 
