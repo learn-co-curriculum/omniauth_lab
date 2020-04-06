@@ -212,7 +212,7 @@ GITHUB_SECRET=519...
 ```
 
 With this in place, visit the root route and click the link that uses GitHub
-for authentication. You'll know you're on the right track when you see
+for authentication. (Be sure to delete your session cookie first.) You'll know you're on the right track when you see
 something like:
 
 ![GitHub Authenticate Form](https://curriculum-content.s3.amazonaws.com/omniauth-lab/authenticate_via_github.png)
