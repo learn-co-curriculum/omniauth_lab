@@ -252,3 +252,4 @@ repo (for further experimentation) feel free to do so!
 [wiki]: https://github.com/omniauth/omniauth/wiki
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/omniauth_lab' title='Omniauth Lab'>Omniauth Lab</a> on Learn.co and start learning to code for free.</p>
+
