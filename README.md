@@ -251,5 +251,5 @@ repo (for further experimentation) feel free to do so!
 [integration]: https://github.com/omniauth/omniauth#integrating-omniauth-into-your-application
 [wiki]: https://github.com/omniauth/omniauth/wiki
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/omniauth_lab' title='Omniauth Lab'>Omniauth Lab</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden' class='util--hide'>View <a href='https://learn.co/lessons/omniauth_lab' title='Omniauth Lab'>Omniauth Lab</a> on Learn.co and start learning to code for free.</p>
 
