@@ -10,6 +10,6 @@
   </pre>
 <% else %>
   <p>No authentication information is available.</p>
-  <p>Try <%= link_to 'Signing in with the developer strategy', '/auth/developer'%>.</p>
-  <p>Try <%= link_to 'Signing in with the GitHub strategy', '/auth/github'%>.</p>
+  <p>Try <%= link_to 'Signing in with the developer strategy', '/auth/developer', method: :post %>.</p>
+  <p>Try <%= link_to 'Signing in with the GitHub strategy', '/auth/github', method: :post %>.</p>
 <% end %>
