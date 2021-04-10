@@ -163,7 +163,7 @@ Here, because we defined `GITHUB_KEY` in `.env`, we'll have its value available
 through `ENV['GITHUB_KEY']`
 
 Because the `.env` file is full of secure keys, which are like passwords, we
-should ***NEVER EVER EVER ADD OR COMMIT TO THEM OUR GIT REPOSITORY***. In this
+should ***NEVER EVER EVER ADD OR COMMIT THEM TO OUR GIT REPOSITORY***. In this
 repository we've added `.env` to the `.gitignore` file so that `git` never sees
 the `.env` file.
 
